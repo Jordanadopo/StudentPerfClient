@@ -165,9 +165,8 @@ button:hover{
 	color: #036629;
 }
 
-.bottom-right{
-	position: absolute;
-	float: right;
-	bottom: 10px;
-	margin-left: auto;
-}
+.bottom-right {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
