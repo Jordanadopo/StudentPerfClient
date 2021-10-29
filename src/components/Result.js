@@ -12,7 +12,7 @@ export const Result = ({values, reset})=>{
         async function fetchPrediction () {
             const response = await axios({
                 method: 'post',
-                url: 'http://localhost:8000/classify/',
+                url: 'https://trickydjangoapp.herokuapp.com/classify/',
                 headers: {}, 
                 data: values
             });
