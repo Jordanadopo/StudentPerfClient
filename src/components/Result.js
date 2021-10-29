@@ -40,7 +40,7 @@ export const Result = ({values, reset})=>{
 
     return (
     <React.Fragment>
-     {hasError && <div className='center'> <p className='text-failed'>Something went wrong</p> <button className='submit'  onClick={ reset }>{'<  '}Try another prediction</button></div>}
+     {hasError && <div className='center'> <h4 className='text-failed'>Something went wrong &#128531;</h4> <button className='submit'  onClick={ reset }>{'<  '}Try another prediction</button></div>}
       {isLoading ? (
         <div className='center'>
             <h3 className='loading'>&#129488; Please wait until the analysis of the information you provided finished &#129488;<br/>You'll the result of prediction soon...</h3>
