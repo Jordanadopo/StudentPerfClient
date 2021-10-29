@@ -1,4 +1,6 @@
-# React Client for Student Performance Predcition 
+# React Client for Student Performance Prediction 
+
+The Backend code built in django-rest-framework is available [here](https://github.com/Jordanadopo/StudentPerfAPI).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
