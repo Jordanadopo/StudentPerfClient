@@ -167,6 +167,6 @@ button:hover{
 .bottom-right{
 	position: absolute;
 	float: right;
-	bottom: 10;
-	right: 10;
+	bottom: 10px;
+	margin-left: auto;
 }
