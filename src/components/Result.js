@@ -9,7 +9,9 @@ export const Result = ({values, reset})=>{
     const [isLoading, setIsLoading] = useState(false);
     const [hasError, setHasError] = useState(false);
 
- 
+    // const test_url = 'http://127.0.0.1:8000/classify/'
+    const prod_url = 'https://trickydjangoapp.herokuapp.com/classify/'
+
     useEffect(() => {
         const fetchPrediction = async () => {
             setIsLoading(true);
@@ -17,7 +19,7 @@ export const Result = ({values, reset})=>{
             try {
                 const response = await axios({
                     method: 'post',
-                    url: 'https://trickydjangoapp.herokuapp.com/classify/',
+                    url: prod_url,
                     headers: {}, 
                     data: values
                 });
@@ -46,9 +48,9 @@ export const Result = ({values, reset})=>{
             <h3 className='loading'>&#129488; Please wait until the analysis of the information you provided finished &#129488;<br/>You'll the result of prediction soon...</h3>
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
-      ) : (
+      ) : hasError ? (<></>): (
         <>
-            <h5 className={resultStatusClassName}>RESULT:</h5>
+            <h5 className={resultStatusClassName}>THE RESULT IS :</h5>
             <div className={resultClassName}>
                 <h1 className='res'>{res['predict']==='passed' ? `${prediction} succeed` : `${prediction} fail`}</h1>
             </div>
